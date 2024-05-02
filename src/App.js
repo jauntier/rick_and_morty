@@ -15,9 +15,9 @@ function App() {
     <div >
       
 <div><Nav /></div>
-{/* <div><SearchBar data={data}/></div> */}
+{/* <div><SearchBar /></div> */}
 
-<div className="flex bg-gradient-to-r from-purple-500 via-pink-500 to-red-500 text-white font-semibold text-4xl">
+<div className="flex text-white font-semibold text-4xl flex">
       <Routes>
     <Route path="/" element={<ComponentX/>}/>
     <Route path="/info" element={<Info/>}/>
@@ -29,7 +29,7 @@ function App() {
         
 </div>
 
-<div><input className="block bg-gradient-to-r from-purple-500 via-pink-500 to-red-500 text-white font-semibold text-4xl p-4 rounded-md focus:outline-none focus:border-blue-500 w-full" type="textarea"></input></div>
+
       </div>
     
   );

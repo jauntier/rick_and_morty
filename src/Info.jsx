@@ -1,25 +1,25 @@
 import React from 'react';
-import { useFetch } from './Components/FetchHook'; // Assuming you have a custom hook named useFetch
+import { useFetch } from './Components/FetchHook'; 
 import Nav from './Nav'
 
 const Info = () => {
-  // Assuming the API URL
+  
   const apiUrl = 'https://rickandmortyapi.com/api/character';
 
-  // Fetching data using the useFetch hook
+  
   const { data, error, isLoading } = useFetch(apiUrl);
 
-  // Render loading state
+
   if (isLoading) {
     return <div><Nav />Loading...</div>;
   }
 
-  // Render error state if any error occurred during fetch
+ 
   if (error) {
     return <div><Nav />Error: {error.message}</div>;
   }
 
-  // Check if data is an array before calling map function
+  
   if (!Array.isArray(data)) {
     if (data.results) {
       const results = data.results;
@@ -42,7 +42,7 @@ const Info = () => {
       );
     }
   }
-  // Render character names
+  
   
 };
 
